@@ -1,3 +1,4 @@
+
 module.exports = (app) => {
     
     const articulos = require('../controllers/articulo.controller.js');
@@ -15,5 +16,7 @@ module.exports = (app) => {
     app.put('/articulos/:artId', articulos.update);
 
     // eliminar articulo
-    app.delete('articulos/:artId', articulos.delete);
+    app.delete('/articulos/:artId', articulos.delete);
+
+    
 }

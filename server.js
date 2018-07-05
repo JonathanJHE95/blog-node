@@ -19,6 +19,8 @@ app.get('/', (req, res) => {
 
 require('./app/routes/articulo.routes.js')(app);
 
+require('./app/routes/comentario.routes.js')(app);
+
 // puerto del servidor
 app.listen(3000, () => {
     console.log("Servidor ejecutandose por el puerto 3000");
