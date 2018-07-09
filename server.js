@@ -11,6 +11,11 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(bodyParser.json())
 
+app.use(function (req, res, next){
+    res.setHeader('Access-Control-Allow-Origin','*')
+    next();
+})
+
 app.get('/', (req, res) => {
     res.json({
         "Bienvenido": "Aqui podras crear articulos"
